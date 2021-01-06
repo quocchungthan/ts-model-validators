@@ -14,7 +14,7 @@ class ValidatorService {
 
         for (let rule of validatorRules) {
             // should put interceptor here. reduce one call of `rule's method`
-            const valid = rule.isValid(rule.getField(model));
+            const valid = rule.isValid(rule.getField(model), model);
             if (!valid) {
                 errors.push({
                     name: rule.getFieldKey(),

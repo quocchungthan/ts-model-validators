@@ -2,7 +2,7 @@ import { validatorService } from "@f/ValidateService";
 import { Course } from "test-scenario/common/required";
 
 
-describe('decorator - common', () => {
+describe('decorator - required', () => {
     it('should have error msg', () => {
         const education = new Course();
         education.participationCount = null;

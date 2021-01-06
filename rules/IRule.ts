@@ -1,5 +1,5 @@
 export interface IRule<T> {
-    isValid: (input: T) => boolean;
+    isValid: (input: T, model?: any) => boolean;
     msg: () => string;
     setFieldKey(key: string | symbol): void;
     getFieldKey(): string;
@@ -23,7 +23,7 @@ export class Rule<T> implements IRule<T> {
         return entity[this.key] as T;
     };
 
-    isValid: (input: T) => boolean = () => {
+    isValid: (input: T, model?: any) => boolean = () => {
         throw "Please implement method `isValid` of your rule: `rule.isValid = function (input: T): boolean { /* ... */ }`";
     }
 
