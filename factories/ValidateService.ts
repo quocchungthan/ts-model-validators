@@ -26,22 +26,29 @@ class ValidatorService {
         return model[ValidatorService.ERRORS_FIELDS] = this.uniquify(errors);
     }
     private uniquify(errors: ValidationMessage[]): ValidationMessage[] {
-        return errors.map(x => x.name).reduce((a, x) => {
+        return this.uniquifyStringArray(errors.map(x => x.name))
+            .map(name => ({
+                name,
+                msgs:
+                    this.uniquifyStringArray(
+                        errors.reduce((a, x) => {
+                            if (x.name === name) {
+                                return a.concat(x.msgs);
+                            }
+                            return a;
+                        }, [] as string[])
+                    )
+            }));
+    }
+
+    private uniquifyStringArray(strs: string[]): string[] {
+        return strs.reduce((a, x) => {
             if (a.indexOf(x) === -1) {
                 a.push(x);
             }
 
             return a;
-        }, [] as string[])
-            .map(name => ({
-                name,
-                msgs: errors.reduce((a, x) => {
-                    if (x.name === name) {
-                        return a.concat(x.msgs);
-                    }
-                    return a;
-                }, [] as string[]).filter((x, i, thisArgs) => thisArgs.indexOf(x) === i)
-            }));
+        }, [] as string[]);
     }
 }
 
