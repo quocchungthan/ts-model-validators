@@ -29,14 +29,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "**/*.ts": "karma-typescript" // *.tsx for React Jsx
+      "**/*.ts": ["karma-typescript", 'coverage'] // *.tsx for React Jsx
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', "karma-typescript"],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
@@ -45,6 +45,11 @@ module.exports = function(config) {
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
+
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
 
     // level of logging
