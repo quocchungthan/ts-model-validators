@@ -9,7 +9,8 @@ export interface IRule<T> {
 export class Rule<T> implements IRule<T> {
     private key: string | symbol = "";
 
-    constructor(private msgTemplate: string, public msgArgs: Array<string | number>) { }
+    constructor(private msgTemplate: string, public msgArgs: Array<string | number> = []) { }
+
     getFieldKey(): string {
         return this.key.toString();
     }
