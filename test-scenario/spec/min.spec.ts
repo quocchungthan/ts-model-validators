@@ -31,4 +31,17 @@ describe('decorator - min', () => {
         expect(validation.filter(x => x.name === "participationCount")[0]).toBeUndefined();
         expect(validation.filter(x => x.name === "customField")[0].msgs.length).toEqual(1);
     });
+
+    it('should not have error msg after data is clean', () => {
+        const education = new Education();
+        let validation = validatorService.validate(education);
+        validation = validatorService.validate(education);
+
+        education.participationCount = 100;
+        education.customField = 100;
+
+        validation = validatorService.validate(education);
+
+        expect(validation.length).toEqual(0);
+    });
 });
