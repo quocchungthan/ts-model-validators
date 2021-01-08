@@ -3,6 +3,10 @@ _this module helps build validation rules for models in typescript projects_
 ### Installation & Usage
 Install module:
 ```
+npm i --save ts-model-validators
+```
+or
+```
 npm i --save @dodo-micro/ts-model-validators
 ```
 Create your class and put some validation decorators on its properties you want to validate:
