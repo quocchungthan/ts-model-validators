@@ -61,9 +61,25 @@ Beside built-in rules, we can easily create custom validation rule as a Decorato
 export function min(minValue: number, errorTemplate: string) {
     const rule = new Rule<number>(errorTemplate, [minValue]);
 
-    // the method check the validity of data, the second argument of this method can be the target object
+    // the method check the validity of data, the second argument of this method can be the target object (check the rule beforeOrEqualTo)
     rule.isValid = function (input: number): boolean {
         return input >= this.msgArgs[0];
+    }
+
+    return validatorFactory.build(rule);
+}
+
+
+export function beforeOrEqualTo(anotherKey: string, errorTemplate: string) {
+    const rule = new Rule<string>(errorTemplate, [anotherKey]);
+    rule.isValid = function (input: string, entity: any): boolean {
+        const anotherField = entity[anotherKey];
+        const target = input;
+        
+        // ... 
+        // Your implementations...
+        // ...
+        //   
     }
 
     return validatorFactory.build(rule);
