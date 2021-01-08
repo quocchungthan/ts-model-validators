@@ -8,5 +8,5 @@ export { email } from '@r/email/email';
 export { dateFormat } from '@r/date/dateFormat';
 export { beforeOrEqualTo } from '@r/date/beforeOrEqualTo';
 export { afterOrEqualTo } from '@r/date/afterOrEqualTo';
-export { validatorFactory } from 'factories/ValidatorFactory';
-export { validatorService } from 'factories/ValidateService';
+export { validatorFactory } from '@f/ValidatorFactory';
+export { validatorService } from '@f/ValidateService';
