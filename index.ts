@@ -10,3 +10,4 @@ export { beforeOrEqualTo } from '@r/date/beforeOrEqualTo';
 export { afterOrEqualTo } from '@r/date/afterOrEqualTo';
 export { validatorFactory } from '@f/ValidatorFactory';
 export { validatorService } from '@f/ValidateService';
+export { Rule, IRule } from '@r/IRule';
