@@ -1,6 +1,6 @@
 {
   "name": "ts-model-validators",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,10 @@
     "test": "karma start",
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist"
   },
-  "author": "",
+  "author": { 
+    "name" : "Chung Q. Than", 
+    "email" : "quocchung.than@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "3.6.2",
