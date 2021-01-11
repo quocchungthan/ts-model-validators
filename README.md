@@ -1,5 +1,8 @@
 # ts-model-validators
-_this module helps build validation rules for models in typescript projects_
+_this module helps build validation rules for models in typescript projects_.
+
+![CircleCI](https://circleci.com/gh/quocchungthan/ts-model-validators.svg?style=svg)
+
 ### Installation & Usage
 Install module:
 ```
