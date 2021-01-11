@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:15.5.1-browsers
+      - image: trion/ng-cli-karma
     steps:
       - checkout
       - run: npm i
