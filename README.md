@@ -5,6 +5,8 @@ _this module helps build validation rules for models in typescript projects_.
 <p align="left">
     <a href="https://github.com/quocchungthan/ts-model-validators/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/quocchungthan/ts-model-validators" /></a>
+    <a href="https://badge.fury.io/js/ts-model-validators" rel="nofollow"><img src="https://badge.fury.io/js/ts-model-validators.svg" alt="npm version"></a>
+    <a href="https://www.npmjs.com/package/ts-model-validators" rel="nofollow"><img src="https://img.shields.io/npm/dt/ts-model-validators.svg" alt="downloads count"></a>
 </p>
 
 ### Installation & Usage
