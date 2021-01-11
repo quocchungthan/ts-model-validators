@@ -4,6 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/quocchungthan/ts-model-validators",
+    "type": "git"
+  },
   "scripts": {
     "test": "karma start",
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist"
