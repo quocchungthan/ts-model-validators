@@ -9,7 +9,7 @@
     "type": "git"
   },
   "scripts": {
-    "test": "karma start",
+    "test": "karma start --single-run",
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist"
   },
   "author": {
