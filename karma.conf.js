@@ -1,6 +1,11 @@
 // Karma configuration
 // Generated on Wed Jan 06 2021 13:49:06 GMT+0700 (GMT+07:00)
 
+process.env.NO_PROXY = 'localhost, 0.0.0.0/4201, 0.0.0.0/9876'; 
+process.env.no_proxy = 'localhost, 0.0.0.0/4201, 0.0.0.0/9876';
+
+
+
 module.exports = function(config) {
   config.set({
 
