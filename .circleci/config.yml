@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:7.10.1-browsers
     steps:
       - checkout
-      - run: npm ci
+      - run: npm i
       - run: npm run test
 workflows:
   node-tests:
