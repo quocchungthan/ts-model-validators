@@ -1,4 +1,4 @@
-# ts-model-validators
+# Typescript(ts) Model Validator
 _this module helps build validation rules for models in typescript projects_.
 
 ![CircleCI](https://circleci.com/gh/quocchungthan/ts-model-validators.svg?style=svg)
@@ -50,16 +50,24 @@ const validation: ValidationMessage[] = validatorService.validate(education);
 With error message template, `{i}` will be replaced by `i-th` passed parameter.
 | Decorator        |  Parameter   | Data type  |
 | ------------- |:-------------|:-----:|
-| required       | error message | any |
-| requiredIf      | the property name that if it has value current field is required. error message  | any |
-| afterOrEqualTo | the other field's name to compare. error message   | string |
-| beforeOrEqualTo      | the other field's name to compare. error message | string |
-| dateFormat      | error message    | string |
-| min             |  min value. error message     | number |
-| max             | max value. error message= | number |
-| minLength       | min value . error message    | string |
-| maxLength        | max value . error message      | string |
-| email           | error message    | string |
+| required       | error template | any |
+| requiredIf      | the property name that if it has value current field is required. error template  | any |
+| afterOrEqualTo | the other field's name to compare. error template   | string |
+| beforeOrEqualTo      | the other field's name to compare. error template | string |
+| dateFormat      | error template    | string |
+| min             |  min value. error template     | number |
+| max             | max value. error template | number |
+| minLength       | min value . error template    | string |
+| maxLength        | max value . error template      | string |
+| email           | error template    | string |
+
+#### Update version 1.2.x
+| Decorator        |  Parameter   | Data type  |
+| ------------- |:-------------|:-----:|
+| contains           | value that you want to check, error template    | array |
+| existsIn           | array input, error template    | any |
+| notIn           | array input, error template    | any |
+| intersect           | array input, error template    | array |
 ### Create custom a validation rule
 
 Beside built-in rules, we can easily create custom validation rule as a Decorator with ValidatorFactory:
@@ -95,6 +103,22 @@ export function beforeOrEqualTo(anotherKey: string, errorTemplate: string) {
 }
 ```
 
+
+#### Update version 1.2.x
+
+Introduce new class `CreateValidatorFactory` to reduce complexity of decorator factories, usage: 
+
+```ts
+// some imports 
+// ...
+
+export function contains(element: string, errorTemplate: string) {
+    return new CreateValidatorFactory<Array<string>>(errorTemplate)
+        .arguments([element])
+        .validateFunction((input) => input.includes(element))
+        .build();
+}
+```
+
 ### Todos
-- [ ] validation options for array
-- [ ] improve usability of the factory
+- [ ] improve usability of module
