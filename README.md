@@ -9,6 +9,8 @@ _this module helps build validation rules for models in typescript projects_.
     <a href="https://www.npmjs.com/package/ts-model-validators" rel="nofollow"><img src="https://img.shields.io/npm/dt/ts-model-validators.svg" alt="downloads count"></a>
 </p>
 
+[![Build Status](https://img.shields.io/travis/quocchungthan/ts-model-validators.svg?style=flat-square)](https://travis-ci.org/quocchungthan/ts-model-validators) [![Dependency Status](https://img.shields.io/david/quocchungthan/ts-model-validators.svg?style=flat-square)](https://david-dm.org/quocchungthan/ts-model-validators) [![devDependency Status](https://img.shields.io/david/dev/quocchungthan/ts-model-validators.svg?style=flat-square)](https://david-dm.org/quocchungthan/ts-model-validators#info=devDependencies)
+
 ### Installation & Usage
 Install module:
 ```
