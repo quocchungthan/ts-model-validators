@@ -1,7 +1,7 @@
 # Typescript(ts) Model Validator
 _this module helps build validation rules for models in typescript projects_.
 
-![CircleCI](https://circleci.com/gh/quocchungthan/ts-model-validators.svg?style=svg)
+![CircleCI](https://circleci.com/gh/quocchungthan/ts-model-validators.svg?style=shield)
 <p align="left">
     <a href="https://github.com/quocchungthan/ts-model-validators/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/quocchungthan/ts-model-validators" /></a>
